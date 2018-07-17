@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <title>Animated Sparkline using SVG Path and d3.js</title>
+ 
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.3/c3.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/zh-tw.js'></script>
+  <script src="javascripts/app.js"></script>
+  <style>
+    /* tell the SVG path to be a thin blue line without any area fill */
+
+    path {
+      stroke: steelblue;
+      stroke-width: 1;
+      fill: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p>
+    <b>Size:</b> 300x30 &nbsp;&nbsp;
+    <b>Interpolation:</b> basis &nbsp;&nbsp;
+    <b>Animation:</b> true &nbsp;&nbsp;
+    <b>Transition:</b> 1000ms &nbsp;&nbsp;
+    <b>Update Frequency:</b> 1000ms
+    <div id="graph1" class="aGraph" style="width:600px; height:500px;"></div>
+  </p>
+
+
+  <script>
+
+    
+
+    displayGraphExample("#graph1", 600, 500, "basis", true, 1000,1000);
+  </script>
+
+</body>
+
+</html>
